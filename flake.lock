@@ -3,11 +3,11 @@
     "calamares-nixos-extensions": {
       "flake": false,
       "locked": {
-        "lastModified": 1680811437,
-        "narHash": "sha256-6KvPmqA8wdeRIH7YiHdJlWZpUDWOJtT9dOve3cOlo/k=",
+        "lastModified": 1680822224,
+        "narHash": "sha256-f6aK0rTy2RyWiLkhVOk2VdNcEUMzFyvahx1dbcxpGRs=",
         "owner": "FedericoSchonborn",
         "repo": "calamares-nixos-extensions",
-        "rev": "c0b3035ee0c97d046963bfcc3f0957fa1346da7d",
+        "rev": "3009a40a2739a672491987e2f581927d06fe1f3d",
         "type": "github"
       },
       "original": {
