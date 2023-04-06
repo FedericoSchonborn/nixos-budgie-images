@@ -3,11 +3,11 @@
     "calamares-nixos-extensions": {
       "flake": false,
       "locked": {
-        "lastModified": 1680739071,
-        "narHash": "sha256-FJGIDSigI8n3HxknR2FPONsqQYtS5HGrv/jxoszh3og=",
+        "lastModified": 1680811437,
+        "narHash": "sha256-6KvPmqA8wdeRIH7YiHdJlWZpUDWOJtT9dOve3cOlo/k=",
         "owner": "FedericoSchonborn",
         "repo": "calamares-nixos-extensions",
-        "rev": "98614b57123731e30f94ea0aca9685f6eb7b6987",
+        "rev": "c0b3035ee0c97d046963bfcc3f0957fa1346da7d",
         "type": "github"
       },
       "original": {
@@ -19,11 +19,11 @@
     },
     "flake-utils": {
       "locked": {
-        "lastModified": 1678901627,
-        "narHash": "sha256-U02riOqrKKzwjsxc/400XnElV+UtPUQWpANPlyazjH0=",
+        "lastModified": 1680776469,
+        "narHash": "sha256-3CXUDK/3q/kieWtdsYpDOBJw3Gw4Af6x+2EiSnIkNQw=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "93a2b84fc4b70d9e089d029deacc3583435c2ed6",
+        "rev": "411e8764155aa9354dbcd6d5faaeb97e9e3dce24",
         "type": "github"
       },
       "original": {
