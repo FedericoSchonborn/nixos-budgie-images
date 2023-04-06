@@ -26,7 +26,14 @@ jobs:
       - name: Build
         run: nix build -L
 
-      - name: Upload Artifacts
+      - name: Locate Artifact
+        run: |
+          ARTIFACT_PATH="$(readlink -f result)"
+          echo "ARTIFACT_NAME=$(basename $ARTIFACT_PATH)" >> $GITHUB_ENV
+          echo "ARTIFACT_PATH=$ARTIFACT_PATH" >> $GITHUB_ENV
+
+      - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          path: result/*.iso
+          name: ${{ env.ARTIFACT_NAME }}
+          path: ${{ env.ARTIFACT_PATH }}
