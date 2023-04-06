@@ -1,0 +1,30 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v19
+
+      - name: Check
+        run: nix flake check
+
+      - name: Build
+        run: nix build -L
+
+      - name: List Artifacts
+        run: ls -lah result
+
+      # - name: Upload Artifacts
+      #   uses: actions/upload-artifact@v3
