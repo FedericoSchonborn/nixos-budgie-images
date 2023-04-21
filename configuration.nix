@@ -46,5 +46,13 @@
     ln -sfT ${pkgs.calamares-nixos}/share/applications/io.calamares.calamares.desktop ${desktopDir + "io.calamares.calamares.desktop"}
   '';
 
+  system.nixos-generate-config.desktopConfiguration = [
+    ''
+      # Enable the Budgie desktop environment.
+      services.xserver.displayManager.lightdm.enable = true;
+      services.xserver.desktopManager.budgie.enable = true;
+    ''
+  ];
+
   system.stateVersion = "23.05";
 }
