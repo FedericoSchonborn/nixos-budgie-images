@@ -6,7 +6,7 @@
     flake-utils.url = "github:numtide/flake-utils";
 
     calamares-nixos-extensions = {
-      url = "github:FedericoSchonborn/calamares-nixos-extensions/budgie";
+      url = "github:NixOS/calamares-nixos-extensions";
       flake = false;
     };
   };
