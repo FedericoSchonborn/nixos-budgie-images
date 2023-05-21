@@ -4,11 +4,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-
-    calamares-nixos-extensions = {
-      url = "github:NixOS/calamares-nixos-extensions";
-      flake = false;
-    };
   };
 
   outputs = {
@@ -24,19 +19,11 @@
         inherit system;
         modules = [
           ./configuration.nix
-          {nixpkgs.overlays = [self.overlays.default];}
         ];
       };
 
       packages.default = self.nixosConfigurations.${system}.config.system.build.isoImage;
 
       formatter = pkgs.alejandra;
-    })
-    // {
-      overlays.default = final: prev: {
-        calamares-nixos-extensions = prev.calamares-nixos-extensions.overrideAttrs (oldAttrs: {
-          src = inputs.calamares-nixos-extensions;
-        });
-      };
-    };
+    });
 }
