@@ -7,10 +7,7 @@
     "${modulesPath}/installer/cd-dvd/installation-cd-graphical-calamares.nix"
   ];
 
-  isoImage = {
-    edition = "budgie";
-    squashfsCompression = "gzip -Xcompression-level 1";
-  };
+  isoImage.edition = "budgie";
 
   services.xserver = {
     desktopManager.budgie = {

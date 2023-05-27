@@ -17,9 +17,7 @@
     in {
       nixosConfigurations = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = [
-          ./configuration.nix
-        ];
+        modules = [./.];
       };
 
       packages.default = self.nixosConfigurations.${system}.config.system.build.isoImage;
